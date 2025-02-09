@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{9B4CA919-4D6C-47EE-8AE0-4A3135BD04B5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aplication", "Aplication", "{1E283AAC-2DC5-4D28-9241-61AF8933D786}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeuLivroDeReceitas.API", "MeuLivroDeReceitas.API\MeuLivroDeReceitas.API.csproj", "{68917764-4E65-4677-8A4D-2B5EE5629730}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeuLivroDeReceitas.Application", "MeuLivroDeReceitas.Application\MeuLivroDeReceitas.Application.csproj", "{180A3810-7BE2-4A18-8EDB-929B6AD9CCDB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{DF30A669-7C3E-4C3D-9AD4-FFDF7183D113}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeuLivroDeReceitas.Infra", "MeuLivroDeReceitas.Infra\MeuLivroDeReceitas.Infra.csproj", "{B0369E98-69BE-4F52-8586-814ACEBDC115}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{6066DE29-3A06-4E3A-8A0A-AD401A6D35CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeuLivroDeReceitas.Comminication", "MeuLivroDeReceitas.Comminication\MeuLivroDeReceitas.Comminication.csproj", "{31E7E1A4-B23F-4499-90B9-BF5EB0D203DF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{D53C1AE1-F7EE-4B5C-A537-60A20ABEE08D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeuLivroDeReceitas.Domain", "MeuLivroDeReceitas.Domain\MeuLivroDeReceitas.Domain.csproj", "{C5F04192-D28F-4829-8CB6-4151380AD690}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68917764-4E65-4677-8A4D-2B5EE5629730}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68917764-4E65-4677-8A4D-2B5EE5629730}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68917764-4E65-4677-8A4D-2B5EE5629730}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68917764-4E65-4677-8A4D-2B5EE5629730}.Release|Any CPU.Build.0 = Release|Any CPU
+		{180A3810-7BE2-4A18-8EDB-929B6AD9CCDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{180A3810-7BE2-4A18-8EDB-929B6AD9CCDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{180A3810-7BE2-4A18-8EDB-929B6AD9CCDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{180A3810-7BE2-4A18-8EDB-929B6AD9CCDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0369E98-69BE-4F52-8586-814ACEBDC115}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0369E98-69BE-4F52-8586-814ACEBDC115}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0369E98-69BE-4F52-8586-814ACEBDC115}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0369E98-69BE-4F52-8586-814ACEBDC115}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31E7E1A4-B23F-4499-90B9-BF5EB0D203DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31E7E1A4-B23F-4499-90B9-BF5EB0D203DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31E7E1A4-B23F-4499-90B9-BF5EB0D203DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31E7E1A4-B23F-4499-90B9-BF5EB0D203DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5F04192-D28F-4829-8CB6-4151380AD690}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5F04192-D28F-4829-8CB6-4151380AD690}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5F04192-D28F-4829-8CB6-4151380AD690}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5F04192-D28F-4829-8CB6-4151380AD690}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{68917764-4E65-4677-8A4D-2B5EE5629730} = {9B4CA919-4D6C-47EE-8AE0-4A3135BD04B5}
+		{180A3810-7BE2-4A18-8EDB-929B6AD9CCDB} = {1E283AAC-2DC5-4D28-9241-61AF8933D786}
+		{B0369E98-69BE-4F52-8586-814ACEBDC115} = {DF30A669-7C3E-4C3D-9AD4-FFDF7183D113}
+		{31E7E1A4-B23F-4499-90B9-BF5EB0D203DF} = {6066DE29-3A06-4E3A-8A0A-AD401A6D35CD}
+		{C5F04192-D28F-4829-8CB6-4151380AD690} = {D53C1AE1-F7EE-4B5C-A537-60A20ABEE08D}
+	EndGlobalSection
+EndGlobal

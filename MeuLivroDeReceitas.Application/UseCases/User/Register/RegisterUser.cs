@@ -4,6 +4,7 @@ using MeuLivroDeReceitas.Application.Services.Cryptography;
 using MeuLivroDeReceitas.Comminication.Requests;
 using MeuLivroDeReceitas.Comminication.Responses;
 using MeuLivroDeReceitas.Domain.Repositories;
+using MeuLivroDeReceitas.Exceptions;
 using MeuLivroDeReceitas.Exceptions.ExceptionsBase;
 
 namespace MeuLivroDeReceitas.Application.UseCases.User.Register
@@ -29,7 +30,7 @@ namespace MeuLivroDeReceitas.Application.UseCases.User.Register
         public async Task<ResponseRegisterUserJson> Execute(RequestRegisterUserJson request)
         {
             // Validar a request
-            ValidateRequest(request);
+            await ValidateRequest(request);
 
             // Mapear a request para o entidade
             var user = _mapper.Map<Domain.Entities.User>(request);
@@ -46,10 +47,14 @@ namespace MeuLivroDeReceitas.Application.UseCases.User.Register
             };
         }
 
-        private void ValidateRequest(RequestRegisterUserJson request)
+        private async Task ValidateRequest(RequestRegisterUserJson request)
         {            
             var validator = new RegisterUserValidator();
             var result = validator.Validate(request);
+
+            var emailExist = await _userRepository.ExistActiveUserWithEmail(request.Email);
+            if (emailExist)
+                result.Errors.Add(new FluentValidation.Results.ValidationFailure(string.Empty, ResourceMessagesExceptions.EMAIL_ALREADY_REGISTERED));
 
             if (result.IsValid == false)
             {

@@ -13,9 +13,13 @@ namespace MeuLivroDeReceitas.Application.UseCases.User.Register
                 .WithMessage(ResourceMessagesExceptions.NAME_EMPTY);
             RuleFor(x => x.Email)
                 .NotEmpty()
-                .WithMessage(ResourceMessagesExceptions.EMAIL_EMPTY)
-                .EmailAddress()
-                .WithMessage(ResourceMessagesExceptions.INVALID_EMAIL);
+                .WithMessage(ResourceMessagesExceptions.EMAIL_EMPTY);
+                 When(x => string.IsNullOrEmpty(x.Email) == false, () =>
+                 {
+                    RuleFor(x => x.Email)
+                        .EmailAddress()
+                        .WithMessage(ResourceMessagesExceptions.INVALID_EMAIL);
+                 });
             RuleFor(x => x.Password)
                 .NotEmpty()
                 .WithMessage(ResourceMessagesExceptions.PASSWORD_EMPTY)

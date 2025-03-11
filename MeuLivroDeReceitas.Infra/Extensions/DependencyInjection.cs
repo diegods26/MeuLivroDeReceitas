@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using MeuLivroDeReceitas.Application.Services.AutoMapper;
 using MeuLivroDeReceitas.Application.Services.Cryptography;
+using MeuLivroDeReceitas.Application.UseCases.Login.DoLogin;
 using MeuLivroDeReceitas.Application.UseCases.User.Register;
 using MeuLivroDeReceitas.Domain.Repositories;
 using MeuLivroDeReceitas.Infra.Context;
@@ -25,6 +26,7 @@ namespace MeuLivroDeReceitas.Infra.Extensions
 
             // Application
             services.AddScoped<IRegisterUserRepository, RegisterUser>();
+            services.AddScoped<IDoLoginUseCase, DoLoginUseCase>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped(opt => new PasswordEncrypter());
             services.AddScoped(option => new MapperConfiguration(opt =>

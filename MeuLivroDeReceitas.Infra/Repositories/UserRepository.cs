@@ -17,5 +17,12 @@ namespace MeuLivroDeReceitas.Infra.Repositories
         public async Task AddUser(User user) => await _context.Users.AddAsync(user);
 
         public async Task<bool> ExistActiveUserWithEmail(string email) => await _context.Users.AnyAsync(u => u.Email.Equals(email) && u.Active);
+
+        public async Task<User?> GetUserByEmailAndPassword(string email, string password)
+        {
+            return await _context.Users
+                .AsNoTracking()
+                .FirstOrDefaultAsync(u => u.Active && u.Email.Equals(email) && u.Password.Equals(password));
+        }
     }
 }
